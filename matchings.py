@@ -48,5 +48,5 @@ def get_matching(df):
     # Print out the matches.
     matches = ""
     for pair in matching:
-        matches += f"  --  {pair[0]} is matched with {pair[1]}"
+        matches += f"  --  {pair[0]} is matched with {pair[1]}\n"
     return (status, matches)
