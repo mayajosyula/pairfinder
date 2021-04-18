@@ -40,13 +40,13 @@ def get_matching(df):
     status = ""
 
     if (len(list(common_names)) == len(names_list)):
-        status = f"\nAll {len(names_list)} were matched.\n"
+        status = f"\nAll {len(names_list)} were matched."
     else:
         leftover = set(names_list) - common_names
-        status = f"\nNot everyone was matched. Unmatched: {leftover}\n"
+        status = f"\nNot everyone was matched. Unmatched: {leftover}"
 
     # Print out the matches.
     matches = ""
     for pair in matching:
-        matches += f"  --  {pair[0]} is matched with {pair[1]}\n"
+        matches += f"\n  --  {pair[0]} is matched with {pair[1]}\n"
     return (status, matches)

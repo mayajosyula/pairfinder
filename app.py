@@ -69,4 +69,4 @@ def set_list(l, i, v):
           l[i] = v
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
