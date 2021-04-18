@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{url_for('static', filename='scripts.js')}}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Pair Finder</title>
+</head>
+<div class = "less-space">
+<h1>Pair Finder</h1>
+Pairs people up based on their preferences. Given a list of people and their preferences, this finds the maximum number of pairs possible under the constraints that each person is part of exactly one pair, and both members of any single pair must share at least one preference.
+<h2>Table</h2>
+If you need a larger table, use the "Add Row" and "Add Column" buttons.
+</div>
+<body>
+<div class="container">
+	<form action="/submit" method="POST">
+    <table id="myTable" class="table w-auto align-middle text-center">
+    <thead>
+        <tr>
+        	<td></td>
+            <td>Name</td>
+            <td><input type="text" placeholder="Pref 1" style="width:75px"></td>
+            <td><input type="text" placeholder="Pref 2" style="width:75px"></td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        	<td style="width:50px">
+                <button class = "button del" type="button" id="delete" >Delete</button>
+            </td>
+            <td>
+                <input type="text" name="row 1" placeholder="Name" style="width:150px">
+            </td>
+            <td>
+                <input class="form-check-input" name="row 1" type="checkbox" value="1-1">
+            </td>
+            <td>
+                <input class="form-check-input" name="row 1" type="checkbox" value="1-2">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div>
+  <input type="button" class = "button add" id="addrow" value="Add Row">
+  <div class="divider"/>
+  <input type="button" class = "button add" id="addcol" value="Add Column">
+</div>
+<div class = "less-space">
+<input type="submit" id="submit" class = "button submit" value="Get Pairs (Table)"/>
+</div>
+</form>
+</div>
+<h2>File Upload</h2>
+If you have a .csv file, you can upload it here. The .csv file must be in the same format as the table: each row except the first is a new person, and each column except the first is a new preference.
+    	<form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="less-space">
+        <input type="file" name="inputfile"/>
+        <div class="less-space">
+        <input type="submit" class = "button submit" id="submit" value="Get Pairs (File)"/>
+        </div>
+      </div>
+      </form>
+</body>
+</html>

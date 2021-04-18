@@ -1,0 +1,87 @@
+html * {
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+#myTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#myTable td, #myTable th {
+  border: thin solid #ddd;
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#myTable tbody th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+#myTable tbody tr:last-of-type {
+  border-bottom: 2px solid #4d4d4d;
+}
+
+input[type=text] {
+  padding: 0;
+  height: 30px;
+  position: relative;
+  left: 0;
+  outline: none;
+  border: thin solid #cdcdcd;
+  border-color: rgba(0, 0, 0, .15);
+  background-color: white;
+  font-size: 14px;
+}
+
+.button {
+  background-color: blue; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 1px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.del {
+  background-color: #f44336;
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+.add {
+  padding: 6px 15px;
+}
+
+.submit {
+  padding: 6px 15px;
+  background-color: #29b021;
+}
+
+.divider {
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
+
+.space {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.less-space {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+#match{
+  white-space: pre-wrap;
+}

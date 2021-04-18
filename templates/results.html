@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{url_for('static', filename='test.js')}}"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>Pair Finder: Results</title>
+</head>
+<body>
+  <h1>Results</h1>
+  Here are your pairing results:
+  <div id = "match">
+  {{ status }}
+  {{ matches }}
+  </div>
+</body>
+</html>
