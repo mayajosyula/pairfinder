@@ -12,11 +12,9 @@ def home():
 def upload_file():
     if request.method == "POST" and 'inputfile' in request.files:
         file = request.files['inputfile']
-        # print(file.read())
-        df = pd.read_csv(file) # works
+        df = pd.read_csv(file)
         print(df)
         (status, matches) = get_matching(df)
-        # print(df.to_json())
         print(matches)
         return render_template("results.html", status=status, matches=matches)
     return "error: file not uploaded"
@@ -24,10 +22,6 @@ def upload_file():
 @app.route("/submit", methods=["GET", "POST"])
 def handle_data():
     if request.method == "POST":
-        # data = request.form.getlist("name")
-        # print(type(data)) 
-        # data1 = request.form.getlist("row 1")
-        # print(data1)
         test = request.form
         table_list = []
         max_len = 0
@@ -43,7 +37,6 @@ def handle_data():
                     # add checkboxes to list
                     col = int(value.split('-')[-1])
                     set_list(current_row, col, 'x')
-                # print(f'{key} : {value}')
             if len(current_row) > max_len:
                 max_len = len(current_row)
             table_list.append(current_row)

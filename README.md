@@ -1,4 +1,4 @@
-# matchings
+# pairfinder
 
 https://pairfinder.herokuapp.com/
 
